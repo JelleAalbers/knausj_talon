@@ -21,9 +21,16 @@ undo that: edit.undo()
 redo that: edit.redo()
 paste match: edit.paste_match_style()
 file save: edit.save()
-wipe: key(backspace)    
-(pad | padding): 
-	insert("  ") 
+wipe: key(backspace)
+(pad | padding):
+	insert("  ")
 	key(left)
 slap: edit.line_insert_down()
 
+# file extensions, accessed trough 'dot ...'
+{user.file_extension}: "{file_extension}"
+
+# reverse abbreviation: 'applications' -> apps
+(abbreviate|abreviate|brief) {user.abbreviation}: "{abbreviation}"
+
+screen numbers:   user.screens_show_numbering()
